@@ -2,6 +2,6 @@
 
 convert YAML to JSON and vice versa
 
-![CRV screencast](screenshot.png)
+![screencast](screencast.gif)
 
 

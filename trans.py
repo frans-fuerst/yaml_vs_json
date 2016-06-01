@@ -36,7 +36,9 @@ class trans(QtGui.QMainWindow):
         x = self.txt_yaml.blockSignals(True)
         _text = str(self.txt_json.toPlainText())
         try:
-            _text = yaml.dump(json.loads(_text))
+            print(json.loads(_text))
+            #_text = json.dumps(yaml.load(_text))
+            _text = yaml.dump(yaml.load(_text), default_flow_style=False)
         except:
             _text = 'could not parse json'
         self.txt_yaml.setPlainText(_text)
